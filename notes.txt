@@ -1,0 +1,38 @@
+Structured output tells the LLM to reply in a fixed format.
+
+Output parser checks that response and converts it into usable Python data.
+
+Example:
+
+LLM gives:
+
+{"name": "Ali", "age": "22"}
+
+Parser converts/validates it as:
+
+Person(name="Ali", age=22)
+
+So:
+
+Structured Output	                    Output Parser
+Defines the format	                 Validates and converts the output
+Helps LLM communicate with systems	 Helps code safely use the response
+
+In short: structured output asks for the format; output parser makes sure it is correct and usable.
+
+
+
+
+Main types of output parsers:
+
+Type	              Use
+String Parser	     Returns simple text output
+JSON Parser	         Converts LLM output into JSON/dictionary
+Pydantic Parser	     Validates output using a Pydantic model/schema
+List Parser	         Converts output into a list
+Comma-Parser	     Converts "AI, ML, DL" into ["AI", "ML", "DL"]
+XML Parser	         Parses output written in XML format
+
+
+JSON OUTPUT PARSER does not enforce a schema
+e.g. if the prompt is give 5 facts about topic, cant structure it as fact1 fact2.

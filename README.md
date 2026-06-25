@@ -23,6 +23,3 @@ LLMs usually generate text, but applications often need data in a specific forma
 
 
 
-```
-
-S
